@@ -30,7 +30,7 @@ const ProductHunter = () => {
       }}
     >
       <div style={{ marginTop: "50px" }}>
-        <Box sx={{ textAlign: "center" }}>
+        <Box sx={{ textAlign: "left", paddingLeft: "25px" }}>
           <Typography sx={{ fontWeight: "bold" }}>
             Oppo A54 5G 6.5 inches Smartphone , 4/64GB, Fluid Black
           </Typography>
@@ -43,7 +43,7 @@ const ProductHunter = () => {
       </div>
       <hr style={{ marginTop: "40px", marginBottom: "20px" }} />{" "}
       <div style={{ marginTop: "20px" }}>
-        <Box sx={{ textAlign: "center" }}>
+        <Box sx={{ textAlign: "left", paddingLeft: "25px" }}>
           <Typography sx={{ fontWeight: "bold" }}>
             Oppo A54 5G 6.5 inches Smartphone , 4/64GB, Fluid Black
           </Typography>
@@ -56,7 +56,7 @@ const ProductHunter = () => {
       </div>
       <hr style={{ marginTop: "50px", marginBottom: "20px" }} />{" "}
       <div style={{ marginTop: "40px" }}>
-        <Box sx={{ textAlign: "center" }}>
+        <Box sx={{ textAlign: "left", paddingLeft: "25px" }}>
           <Typography sx={{ fontWeight: "bold" }}>
             Oppo A54 5G 6.5 inches Smartphone , 4/64GB, Fluid Black
           </Typography>
@@ -70,6 +70,7 @@ const ProductHunter = () => {
       <Box
         sx={{
           paddingLeft: "15px",
+          position: "absolute",
         }}
       >
         <Button

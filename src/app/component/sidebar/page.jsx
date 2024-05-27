@@ -18,7 +18,7 @@ const Sidebar = () => {
             <a
               href="#"
               className="text-white 
-                     hover:text-gray-300"
+              hover:text-gray-300"
             >
               Product Hunter
             </a>
@@ -27,7 +27,7 @@ const Sidebar = () => {
             <a
               href="#"
               className="text-white 
-                          hover:text-gray-300"
+              hover:text-gray-300"
             >
               Bulk Lister
             </a>
@@ -37,7 +37,7 @@ const Sidebar = () => {
 
       <div
         className={`flex-1 p-4 
-                        ${isOpen ? "ml-64" : "ml-0"}`}
+        ${isOpen ? "ml-64" : "ml-0"}`}
       >
         <div className="ml-auto">
           <button
