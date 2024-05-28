@@ -56,7 +56,7 @@ const ProductHunter = () => {
       <div className="pl-4 absolute bottom-4 left-4">
         <button
           onClick={handleOpenModal}
-          className="bg-blue-600 border border-gray-400 text-white px-4 py-2"
+          className="bg-blue-600 border border-gray-400 text-white px-4 py-2 "
         >
           Open
         </button>
