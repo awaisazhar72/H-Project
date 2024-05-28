@@ -1,10 +1,6 @@
 "use client";
-import { Box, Button, Typography } from "@mui/material";
 import React, { useState } from "react";
-
 import ModalForm from "../formModal/page";
-
-import ClearIcon from "@mui/icons-material/Clear";
 
 const ProductHunter = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,96 +14,76 @@ const ProductHunter = () => {
   };
 
   return (
-    <Box
-      sx={{
-        position: "fixed",
-        width: "65%",
-        top: "100px",
-        marginLeft: "22%",
-        height: "80vh",
-        backgroundColor: "white",
-        borderRadius: "15px",
-      }}
-    >
-      <div style={{ marginTop: "50px" }}>
-        <Box sx={{ textAlign: "left", paddingLeft: "25px" }}>
-          <Typography sx={{ fontWeight: "bold" }}>
-            Oppo A54 5G 6.5 inches Smartphone , 4/64GB, Fluid Black
-          </Typography>
+    <div className="fixed w-2/3 top-24 ml-[22%] h-[80vh] bg-white rounded-lg shadow-lg">
+      <div className="mt-12">
+        <div className="text-left pl-6">
+          <p className="font-bold">
+            Oppo A54 5G 6.5 inches Smartphone, 4/64GB, Fluid Black
+          </p>
           <p>
             4GB of RAM and 64GB of internal storage Display: 6.5-inch
             touchscreen, 2400 x 1080 pixels, 2MP and 2MP, 16MP front camera
             $741.90
           </p>
-        </Box>
+        </div>
       </div>
-      <hr style={{ marginTop: "40px", marginBottom: "20px" }} />{" "}
-      <div style={{ marginTop: "20px" }}>
-        <Box sx={{ textAlign: "left", paddingLeft: "25px" }}>
-          <Typography sx={{ fontWeight: "bold" }}>
-            Oppo A54 5G 6.5 inches Smartphone , 4/64GB, Fluid Black
-          </Typography>
+      <hr className="mt-10 mb-5" />
+      <div className="mt-5">
+        <div className="text-left pl-6">
+          <p className="font-bold">
+            Oppo A54 5G 6.5 inches Smartphone, 4/64GB, Fluid Black
+          </p>
           <p>
             4GB of RAM and 64GB of internal storage Display: 6.5-inch
             touchscreen, 2400 x 1080 pixels, 2MP and 2MP, 16MP front camera
             $741.90
           </p>
-        </Box>
+        </div>
       </div>
-      <hr style={{ marginTop: "50px", marginBottom: "20px" }} />{" "}
-      <div style={{ marginTop: "40px" }}>
-        <Box sx={{ textAlign: "left", paddingLeft: "25px" }}>
-          <Typography sx={{ fontWeight: "bold" }}>
-            Oppo A54 5G 6.5 inches Smartphone , 4/64GB, Fluid Black
-          </Typography>
+      <hr className="mt-12 mb-5" />
+      <div className="mt-10">
+        <div className="text-left pl-6">
+          <p className="font-bold">
+            Oppo A54 5G 6.5 inches Smartphone, 4/64GB, Fluid Black
+          </p>
           <p>
             4GB of RAM and 64GB of internal storage Display: 6.5-inch
             touchscreen, 2400 x 1080 pixels, 2MP and 2MP, 16MP front camera
             $741.90
           </p>
-        </Box>
+        </div>
       </div>
-      <Box
-        sx={{
-          paddingLeft: "15px",
-          position: "absolute",
-        }}
-      >
-        <Button
-          variant="contained"
+      <div className="pl-4 absolute bottom-4 left-4">
+        <button
           onClick={handleOpenModal}
-          sx={{
-            background: "#1273eb",
-            border: "1px solid grey",
-            color: "white",
-          }}
+          className="bg-blue-600 border border-gray-400 text-white px-4 py-2"
         >
           Open
-        </Button>
-      </Box>
+        </button>
+      </div>
       {isModalOpen && (
-        <Box
-          sx={{
-            position: "fixed",
-            top: 0,
-            right: 0,
-            bottom: 0,
-            width: "80%",
-            maxWidth: "655px",
-            backgroundColor: "white",
-            borderRadius: "15px",
-            boxShadow: 24,
-            p: 4,
-            overflowY: "auto",
-          }}
-        >
-          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-            <ClearIcon onClick={handleCloseModal} />
-          </Box>
+        <div className="fixed top-0 right-0 bottom-0 w-4/5 max-w-3xl bg-white rounded-lg shadow-lg p-4 overflow-y-auto">
+          <div className="flex justify-end">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 cursor-pointer"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              onClick={handleCloseModal}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
           <ModalForm />
-        </Box>
+        </div>
       )}
-    </Box>
+    </div>
   );
 };
 

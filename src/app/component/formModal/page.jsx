@@ -1,107 +1,95 @@
-import { Box, Button, Paper, TextField, Typography } from "@mui/material";
 import React from "react";
-import ClearIcon from "@mui/icons-material/Clear";
 
 const ModalForm = () => {
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex ",
-            gap: "15px",
-            margin: "5px",
-            padding: "5px",
-          }}
-        >
-          <ClearIcon />
-          <Typography>Filter</Typography>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            padding: "5px",
-            margin: "2px",
-            gap: "15px",
-          }}
-        >
-          <Button
-            sx={{ border: "1px solid grey", marginTop: "3px", width: "70px" }}
+      <div className="flex justify-between">
+        <div className="flex gap-4 m-2 p-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 cursor-pointer"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+          <p>Filter</p>
+        </div>
+        <div className="flex p-2 m-1 gap-4">
+          <button className="border border-gray-400 mt-1 w-20 py-1">
             Cancel
-          </Button>
-          <Button
-            variant="contained"
-            sx={{
-              variant: "contained",
-              backgroundColor: "#1273eb",
-              border: "1px solid grey",
-              color: "white",
-            }}
-          >
+          </button>
+          <button className="bg-blue-600 border border-gray-400 text-white py-1 px-4">
             Save
-          </Button>
-        </Box>
-      </Box>
+          </button>
+        </div>
+      </div>
 
       <form>
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <Box>
-              <Typography>Number of Items</Typography>
-              <TextField />
-            </Box>
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-between">
+            <div>
+              <p>Number of Items</p>
+              <input
+                type="text"
+                placeholder="Enter Number of items"
+                className="border border-gray-400 rounded p-2 w-full max-w-xl"
+              />
+            </div>
 
-            <Box>
-              <Typography>Minimum reviews</Typography>
-              <TextField />
-            </Box>
-          </Box>
+            <div>
+              <p>Minimum reviews</p>
+              <input
+                type="text"
+                placeholder="Please Enter Minimum reviews"
+                className="border border-gray-400 rounded p-2"
+              />
+            </div>
+          </div>
 
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <Box>
-              <Typography>Max Price</Typography>
-              <TextField />
-            </Box>
+          <div className="flex justify-between">
+            <div>
+              <p>Max Price</p>
+              <input
+                type="text"
+                placeholder="Please Enter Max Price"
+                className="border border-gray-400 rounded p-2"
+              />
+            </div>
 
-            <Box>
-              <Typography>Min Price</Typography>
-              <TextField />
-            </Box>
-          </Box>
+            <div>
+              <p>Min Price</p>
+              <input
+                type="text"
+                placeholder="Please Enter Min Price"
+                className="border border-gray-400 rounded p-2"
+              />
+            </div>
+          </div>
 
-          <Box>
-            <Typography>Keywords</Typography>
-            <TextField
-              sx={{
-                width: "550px",
-              }}
+          <div>
+            <p>Keywords</p>
+            <input
+              type="text"
+              placeholder="Please Enter url description"
+              className="border border-gray-400 rounded p-2 w-full h-[160px] max-w-xl"
             />
-          </Box>
-          <Box>
-            <Typography>Keyword To Exclude</Typography>
-            <TextField
-              sx={{
-                width: "550px",
-              }}
+          </div>
+          <div>
+            <p>Keyword To Exclude</p>
+            <input
+              type="text"
+              placeholder="Please Enter url description"
+              className="border border-gray-400 rounded p-2 w-full h-[160px] max-w-xl"
             />
-          </Box>
-        </Box>
+          </div>
+        </div>
       </form>
     </>
   );
